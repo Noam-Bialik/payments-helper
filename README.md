@@ -11,4 +11,4 @@
     1. Ctrl + V
 1. go to desktop: WinKey + D
 1. run paymentsStartProgran.ps1: 
-![paymentsStartProgran.ps1](images\runPowerShell.jpg)
+![paymentsStartProgran.ps1](https://github.com/Noam-Bialik/payments-helper/blob/master/images/runPowerShell.jpg)
