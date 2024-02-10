@@ -1,0 +1,23 @@
+import unittest
+import datetime as dt
+from logic.repo_search import *
+
+class RepoSearchMethodsTests(unittest.TestCase):
+    
+    def test_get_before_and_after_readings_when_there_is_before_and_after(self):
+        
+        a = get_before_and_after_readings("X", dt.datetime(2024,1,1), Repository("X") )
+        self.assertEqual('hi there', "hi there")
+        
+    def test_get_before_and_after_readings_when_there_is_before(self):
+        self.assertEqual('hi there', "hi there")
+        
+    def test_get_before_and_after_readings_when_there_is_after(self):
+        self.assertEqual('hi there', "hi there")
+        
+    def test_get_before_and_after_readings_when_there_is_no_before_or_after(self):
+        self.assertEqual('hi there', "hi there")
+    
+        
+if __name__ == '__main__':
+    unittest.main()
