@@ -1,6 +1,7 @@
 from help import *
 from data.repository import *
 from logic.repo_search import *
+import yaml
 
 
 user_date_format : str = '%d %m %Y'
@@ -28,7 +29,7 @@ def preform_calc(chosen_type: str):
     end = get_before_and_after_readings(chosen_type, bill.date_end, repo)
     aprox_end = calc_approximately_count(end[0], end[1], bill.date_end)
     result = period_bills(bill.price, bill.count_use, aprox_end - aprox_start, "bialik", "green")
-    print (result)
+    printPretty(result)
 
 
 def calc_approximately_count(a, b, wanted_date):
@@ -53,5 +54,7 @@ def print_types():
     print("please enter the counter type: ")
     print(types)
 
-    
+def printPretty(m : dict):
+    print(yaml.dump(m, default_flow_style=False))
+
 main()
